@@ -32,7 +32,7 @@ If you are running Ubuntu, the easiest way to install a recent version of Go is 
 0. Type in `sudo apt-get install golang` and press enter.
 0. Open up a terminal/cmd window and type in `go version` and press enter. You should see output similar to the following:
 
-   `go version go1.6 darwin/amd64`
+   `go version go1.6 linux/amd64`
 
 That’s it, you are done installing Go for Ubuntu Linux.
 
