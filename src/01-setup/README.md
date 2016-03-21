@@ -63,7 +63,7 @@ The Glide package manager for Go can be found at it’s GitHub repository. Rathe
 
 0. Open a terminal/cmd window.
 0. Type in `go get -u github.com/Masterminds/glide` and press enter. This will retrieve the dependency sources and Glide sources to the source directory, and build them into the pkg and bin directories inside of your $GOPATH.
-0. Type in `glide -c` and press enter. You should see output similar to the following:
+0. Type in `glide -v` and press enter. You should see output similar to the following:
 
    `glide version dev`
 
