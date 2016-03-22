@@ -73,7 +73,7 @@ The IntelliJ Go plugin is compatible with a large set of IntelliJ platform IDEs 
 
 To install it in IDEA (Other IntelliJ platforms may be similar, but no guarantees):
 
-0. Follow the instructions on the [JetBrains site](https://github.com/go-lang-plugin-org/go-lang-idea-plugin) to add the plugin. When you are adding the repository in step 4 of the JetBrains instructions, use the value `https://plugins.jetbrains.com/plugins/alpha/5047` for the weekly build of the plugin.
+0. Follow the instructions on the [JetBrains site](https://www.jetbrains.com/help/idea/2016.1/managing-enterprise-plugin-repositories.html?origin=old_help) to add the plugin. When you are adding the repository in step 4 of the JetBrains instructions, use the value `https://plugins.jetbrains.com/plugins/alpha/5047` for the weekly build of the plugin.
 0. Open the Preferences dialog.
 0. Select the Plugins settings.
 0. Type `go` in the Plugins search field.
