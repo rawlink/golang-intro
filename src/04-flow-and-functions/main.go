@@ -9,14 +9,12 @@ import (
 )
 
 func main() {
-    applicationArguments()
     whatIf()
     whatFor()
     switchUp()
     iDefer()
     gettingClosure()
 
-    fmt.Println()
     fmt.Println("Exiting main")
     fmt.Println("=====================")
 
@@ -25,21 +23,6 @@ func main() {
 
     // Note the exit status in the run console
     os.Exit(1)
-}
-
-func applicationArguments() {
-    fmt.Println("Application arguments")
-    fmt.Println("=====================")
-
-    // There are several libraries for more advanced handling of application arguments.
-    fmt.Printf("OS arguments type = %T\n", os.Args)
-
-    // Example of a for loop using a range. Note the multi-return of range.
-    for index, val := range os.Args {
-        fmt.Println("Argument", index, "value =", val)
-    }
-
-    fmt.Println()
 }
 
 func multiReturn() (int,error) {
@@ -236,7 +219,7 @@ func iDefer() {
 func getFibber() func() int {
     a, b := 0, 1
     return func() int {
-        a, b = b, a+b
+        a, b = b, a+b // it's worth noting that these assignments happen "simultaneously"
         return a
     }
 }
@@ -250,4 +233,6 @@ func gettingClosure() {
     for i := 1 ; i <= 10 ; i++ {
         fmt.Println("Fibonnaci", i, "is", fib())
     }
+
+    fmt.Println()
 }
