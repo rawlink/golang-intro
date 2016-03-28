@@ -6,6 +6,8 @@ import (
     "os"
     m "math"
     "errors"
+    "math/rand"
+    "time"
 )
 
 func main() {
@@ -103,10 +105,16 @@ func whatFor() {
     fmt.Println()
 
     // for... ever
+    rand.Seed(time.Now().UnixNano())
+    fmt.Print("You might be stuck here forever...")
     for {
-        fmt.Println("I'm stuck here forever... maybe not.")
-        break
+        number := rand.Intn(1000)
+        fmt.Print(" ", number)
+        if number == 666 {
+            break
+        }
     }
+    fmt.Println(" maybe not.")
 
     // Showing the range keyword in conjunction with for loops - essentially for each
     // There are several libraries for more advanced handling of application arguments.
