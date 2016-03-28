@@ -197,6 +197,10 @@ func extraCredit() {
     var famousPairs map[string]string = make(map[string]string)
     famousPairs["Bonnie"] = "Clyde"
     famousPairs["Penn"] = "Teller"
+    famousPairs["Thelma"] = "Loise"
+    // remove values from map
+    delete(famousPairs, "Thelma")
+    // map literal
     mapLiteral := map[string]string{"fred":"wilma", "barney":"betty"}
     fmt.Printf("famousPairs -> value = %v, type = %T\n", famousPairs, famousPairs)
     fmt.Printf("mapLiteral -> value = %v, type = %T\n", mapLiteral, mapLiteral)
