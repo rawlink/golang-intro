@@ -183,12 +183,17 @@ func extraCredit() {
     // slices - backed by an array, but much more flexible
     // There is so much more to slices than we can cover here. Just know that they are similar to slices in Python
     // and you should use them instead of arrays in most situations.
-    slice1 := []int{1,2,3,5,8,13}
-    slice2 := []int{1,4,9}
+    slice1 := []int{1,4,9}
+    slice2 := []int{1,2,3,5,8,13}
     // Unlike arrays, a slice's size is not part of its type
     // So you can totally do this
     slice1 = slice2
     fmt.Printf("slice1 -> value = %v, type = %T - Notice the lack of size in the type\n", slice1, slice1)
+    fmt.Printf("slice1[2:4] -> value = %v\n", slice1[2:4])
+    fmt.Printf("slice1[3:] -> value = %v\n", slice1[3:])
+    fmt.Printf("slice1[:3] -> value = %v\n", slice1[:3])
+    // Unlike python, you can't do the following
+    //fmt.Printf("slice1[:-2] -> value = %v\n", slice1[:-2])
 
     // slices and arrays are one-dimensional, but like c/c++ can be composed into multi-dimensional versions
 

@@ -4,9 +4,9 @@ package main
 import (
     "fmt"
     "os"
-    m "math"
+    m "math" // Renamed the math import to m. You should really only do this with external dependencies when there is a naming conflict.
     "errors"
-    "math/rand"
+    "math/rand" // A sub-import from math. The import will be available as the last part of the path "rand".
     "time"
 )
 
@@ -16,6 +16,7 @@ func main() {
     switchUp()
     iDefer()
     gettingClosure()
+    oneMoreThing()
 
     fmt.Println("Exiting main")
     fmt.Println("=====================")
@@ -114,7 +115,7 @@ func whatFor() {
             break
         }
     }
-    fmt.Println(" maybe not.")
+    fmt.Println("\n... or not.")
 
     // Showing the range keyword in conjunction with for loops - essentially for each
     // There are several libraries for more advanced handling of application arguments.
@@ -241,6 +242,23 @@ func gettingClosure() {
     for i := 1 ; i <= 10 ; i++ {
         fmt.Println("Fibonnaci", i, "is", fib())
     }
+
+    fmt.Println()
+}
+
+func sumOf(what string, nums ...int) {
+    sum := 0
+    for _, val := range nums {
+        sum += val
+    }
+    fmt.Println("The sum of", what, "is", sum)
+}
+
+func oneMoreThing() {
+    fmt.Println("Variadic functions")
+    fmt.Println("==================")
+
+    sumOf("all fears", 15, 34, 53, 22, 91)
 
     fmt.Println()
 }
