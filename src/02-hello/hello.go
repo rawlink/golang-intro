@@ -13,6 +13,8 @@ func main() {
     fmt.Println("Hello,", "gopher!") // Arguments will be converted to strings and concatenated together with spaces in between
     fmt.Printf("Goodbye, %s.\n", "gopher") // Does what you would think.
 
+    // Go's Printf() is really friendly.
+    fmt.Printf("%f is %s", "fred")
     // Unused variables will not compile
     //var i int = 0
 }

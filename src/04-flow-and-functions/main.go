@@ -14,6 +14,7 @@ func main() {
     whatIf()
     whatFor()
     switchUp()
+    firstClass()
     iDefer()
     gettingClosure()
     oneMoreThing()
@@ -187,6 +188,23 @@ func switchUp() {
     default:
         fmt.Println("Several or more")
     }
+
+    fmt.Println()
+}
+
+func calc(a int, b int, operation func(int, int) int) int {
+    return operation(a,b)
+}
+
+func firstClass() {
+    fmt.Println("First class functions")
+    fmt.Println("=====================")
+
+    add := func (a int, b int) int { return a + b }
+    multiply := func (a int, b int) int { return a * b }
+
+    fmt.Println("calc(3, 5, add) is", calc(3, 5, add))
+    fmt.Println("calc(4, 6, multiply) is", calc(4, 6, multiply))
 
     fmt.Println()
 }
