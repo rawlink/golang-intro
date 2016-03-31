@@ -85,6 +85,7 @@ func bufferedChannels() {
 
 // You can specify the direction a channel variable will work
 func runThenClose(c chan<- int) {
+//func runThenClose(c <-chan int) {
     for i := 0 ; i < 10 ; i++ {
         c <- rand.Intn(100)
     }
