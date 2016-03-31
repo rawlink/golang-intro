@@ -75,7 +75,7 @@ func typeAssertions() {
     f, ok := i.(float64)
     fmt.Printf("Type assertion results for float64 -> f = %f, ok = %t\n", f, ok)
     s, ok := i.(string)
-    fmt.Printf("Type assertion results for float64 -> s = %s, ok = %t\n", s, ok)
+    fmt.Printf("Type assertion results for string -> s = %s, ok = %t\n", s, ok)
     // There is a single result version of a type assertion, but it will panic if it fails.
     //fmt.Println("bool assertion result is", i.(bool))
 
