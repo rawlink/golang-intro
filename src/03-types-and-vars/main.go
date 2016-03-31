@@ -167,6 +167,8 @@ func extraCredit() {
     fmt.Println("Extra credit")
     fmt.Println("============")
 
+    // The built in array, slice, and map types are not thread safe.
+
     // arrays
     var arr1 [5]int
     arr1[2] = 3

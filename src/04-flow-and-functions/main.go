@@ -11,13 +11,13 @@ import (
 )
 
 func main() {
-    whatIf()
-    whatFor()
-    switchUp()
-    firstClass()
-    iDefer()
-    gettingClosure()
-    oneMoreThing()
+    ifStatements()
+    loops()
+    switchStatements()
+    firstClassFunctions()
+    deferredFunctions()
+    closures()
+    variadicFunctions()
 
     fmt.Println("Exiting main")
     fmt.Println("=====================")
@@ -37,7 +37,7 @@ func multiReturn() (int,error) {
     return val, err
 }
 
-func whatIf() {
+func ifStatements() {
     fmt.Println("If statements")
     fmt.Println("=============")
 
@@ -77,8 +77,8 @@ func whatIf() {
     fmt.Println()
 }
 
-func whatFor() {
-    fmt.Println("For loops")
+func loops() {
+    fmt.Println("Loops")
     fmt.Println("=========")
 
     // Plain old for. The semicolons are back.
@@ -151,7 +151,7 @@ func getFirstName() string {
     //return "rockhead"
 }
 
-func switchUp() {
+func switchStatements() {
     fmt.Println("Switch statements")
     fmt.Println("=================")
 
@@ -196,7 +196,7 @@ func calc(a int, b int, operation func(int, int) int) int {
     return operation(a,b)
 }
 
-func firstClass() {
+func firstClassFunctions() {
     fmt.Println("First class functions")
     fmt.Println("=====================")
 
@@ -213,7 +213,17 @@ func deferral(i int) {
     fmt.Println("Deferral ", i)
 }
 
-func iDefer() {
+func measureFunc(functionName string, start time.Time) {
+    duration := time.Since(start)
+    fmt.Println(functionName, "took", duration, "to run")
+}
+
+func anotherCoolDeferredExample() {
+    defer measureFunc("anotherCoolDeferredExample", time.Now())
+    fmt.Println("Doing work in anotherCoolDeferredExample")
+}
+
+func deferredFunctions() {
     fmt.Println("Deferred functions")
     fmt.Println("==================")
 
@@ -240,18 +250,23 @@ func iDefer() {
 
     */
 
+    anotherCoolDeferredExample()
+
     fmt.Println("Exiting iDefer")
 }
 
 func getFibber() func() int {
     a, b := 0, 1
     return func() int {
-        a, b = b, a+b // it's worth noting that these assignments happen "simultaneously"
+        a, b = b, a+b // It's worth noting that these assignments happen "simultaneously"
+        // This would return an altogether different result.
+        //a = b
+        //b = a+b
         return a
     }
 }
 
-func gettingClosure() {
+func closures() {
     fmt.Println("Closures")
     fmt.Println("========")
 
@@ -272,10 +287,11 @@ func sumOf(what string, nums ...int) {
     fmt.Println("The sum of", what, "is", sum)
 }
 
-func oneMoreThing() {
+func variadicFunctions() {
     fmt.Println("Variadic functions")
     fmt.Println("==================")
 
+    // varargs functions are as expected
     sumOf("all fears", 15, 34, 53, 22, 91)
 
     fmt.Println()
