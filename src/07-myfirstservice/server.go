@@ -13,8 +13,6 @@ import (
     "errors"
 )
 
-const FLAG_SERVER_NAME = "servername"
-const FLAG_PORT = "port"
 const FLAG_FAULTY = "faulty"
 
 func main() {
@@ -33,43 +31,36 @@ func main() {
     router := gin.Default()
 
     // Add middlewares. They are like servlet filters
-    router.Use(configurationMiddleware(arguments))
     router.Use(counterMiddleware())
     if faulty, _ := arguments[FLAG_FAULTY].(bool) ; faulty {
         router.Use(faultyMiddleware())
 
     }
 
-    // Create a rest endpoint
+    // Create rest endpoints
     router.GET("/hello/:name", metricsWrapper("hello"), hello)
     router.GET("/goodbye/:name", metricsWrapper("goodbye"), goodbye)
 
     // Start listening
-    router.Run(fmt.Sprintf(":%d", arguments[FLAG_PORT]))
+    router.Run()
 }
 
 func hello(ctx *gin.Context) {
-    servername, _ := ctx.Get(FLAG_SERVER_NAME)
     name := ctx.Param("name")
-    ctx.String(http.StatusOK, "%s says, 'Hello, %s!'", servername, name)
+    ctx.String(http.StatusOK, "Server says, 'Hello, %s!'", name)
 }
 
 func goodbye(ctx *gin.Context) {
-    servername, _ := ctx.Get(FLAG_SERVER_NAME)
     name := ctx.Param("name")
-    ctx.String(http.StatusOK, "%s says, 'Goodbye, %s.'", servername, name)
+    ctx.String(http.StatusOK, "Server says, 'Goodbye, %s.'", name)
 }
 
 func parseCommandLine() map[string]interface{} {
     arguments := make(map[string]interface{})
-    serverName := flag.String(FLAG_SERVER_NAME,"Unknown","The name of the server")
-    port := flag.Int(FLAG_PORT, 8080, "The port to listen on")
     faulty :=  flag.Bool(FLAG_FAULTY, false, "Should this server randomly 'fail'")
 
     flag.Parse()
 
-    arguments[FLAG_SERVER_NAME] = *serverName
-    arguments[FLAG_PORT] = *port
     arguments[FLAG_FAULTY] = *faulty
 
     return arguments
@@ -91,15 +82,6 @@ func metricsWrapper(name string) gin.HandlerFunc {
     }
 }
 
-func configurationMiddleware(config map[string]interface{}) gin.HandlerFunc {
-    return func(ctx *gin.Context) {
-        for key, value := range config {
-            ctx.Set(key, value)
-        }
-        ctx.Next()
-    }
-}
-
 func counterMiddleware() gin.HandlerFunc {
     counter := metrics.NewCounter()
     metrics.Register("api.all.counter", counter)
@@ -114,7 +96,7 @@ func faultyMiddleware() gin.HandlerFunc {
     // Random failure middleware
     return func(ctx *gin.Context) {
         const randMax = 100
-        const oneInWhat = 2
+        const oneInWhat = 3
         chance := rand.Intn(randMax)
         if chance < randMax / oneInWhat { // Fail 1 in oneInWhat times
             ctx.AbortWithError(http.StatusInternalServerError, errors.New("Random failure"))

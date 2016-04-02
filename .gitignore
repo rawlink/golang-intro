@@ -3,3 +3,4 @@ bin
 src/github.com
 src/gopkg.in
 .idea
+vendor

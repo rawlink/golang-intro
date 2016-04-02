@@ -1,0 +1,8 @@
+package: 07-myfirstservice
+import:
+- package: github.com/Sirupsen/logrus
+- package: github.com/afex/hystrix-go
+  subpackages:
+  - hystrix
+- package: github.com/gin-gonic/gin
+- package: github.com/rcrowley/go-metrics
