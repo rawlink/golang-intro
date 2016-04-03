@@ -25,6 +25,7 @@ I recommend the following materials as a kick off point for additional learning:
 
 * [The Go website](https://golang.org/)
 * [A Tour of Go](https://tour.golang.org/) - A quick walkthrough of the Go language.
+* [Go command usage](https://golang.org/cmd/go/) - How to use the go CLI tool.
 * [Go by Example](https://gobyexample.com/) - A slightly more thorough walkthrough of the Go language.
 * [The Go Programming Language Specification](https://golang.org/ref/spec) - It’s not as daunting as it sounds (82 pages). That would be the Java Language Specification(Java SE 8 - 788 pages).
 * [Effective Go](https://golang.org/doc/effective_go.html) - Documentation on the Go website for writing idiomatic Go.
