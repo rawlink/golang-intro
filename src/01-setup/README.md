@@ -60,7 +60,7 @@ Now that you have cloned the tutorial repository, you will configure it as your 
 
 ## Install the Glide package manager
 
-The Glide package manager for Go can be found at it’s GitHub repository. Rather than follow the installation instructions contained in the GitHub repository, I encourage you to use the following steps.
+The [Glide](https://github.com/Masterminds/glide) package manager for Go can be found at it’s GitHub repository. Rather than follow the installation instructions contained in the GitHub repository, I encourage you to use the following steps.
 
 0. Open a terminal/cmd window.
 0. Type in `go get -u github.com/Masterminds/glide` and press enter. This will retrieve the dependency sources and Glide sources to the source directory, and build them into the pkg and bin directories inside of your $GOPATH.
