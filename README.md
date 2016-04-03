@@ -3,7 +3,7 @@
 This tutorial is a brief introduction to the Go language. The goals are as follows:
 
 * Install and configure Go, the Glide package manager, and the Intellij Go plugin.
-* Configure you development environment.
+* Configure your Go development environment.
 * Learn Go program layout, syntax, and features.
 * Learn dependency management with a “real” application.
 
