@@ -1,4 +1,4 @@
-# Web Service
+# A Web Service
 In this section, you will work with a “real” program. This program is a web service using third-party libraries. Upon completion of this section you should have a basic understanding of the following:
 
 * Vendored package management - Introduced as an expirement in Go 1.5. Turned on by default in Go 1.6.
