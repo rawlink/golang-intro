@@ -1,4 +1,4 @@
-# Setup
+# Setup Your Go Development Environment
 
 In this section, you will setup your Go development environment. Upon completion of this section you should have achieved the following:
 
