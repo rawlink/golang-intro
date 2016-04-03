@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// We will lightly touch on structs here. We will investigate them in greater depth in a later section.
 type myObj struct {
     s string
     i int
@@ -19,12 +20,15 @@ func main() {
     constants()
     pointersAndValues()
     typeConversion()
-    extraCredit()
+    arraysAndSlices()
+    maps()
+    complexNumbers()
 }
 
 func zeroValues() {
     fmt.Println("Zero values")
     fmt.Println("===========")
+
     // types are specified after the variable (similar to scala)
     var i int // Numeric types default to zero
     var b bool // Boolean defaults to false
@@ -35,10 +39,7 @@ func zeroValues() {
     fmt.Println("i is", i)
     fmt.Println("b is", b)
     fmt.Printf("s is '%s'\n", s)
-
-    // We'll get back to structs later
     fmt.Printf("o is %+v\n", o)
-
     fmt.Println("p is", p)
 
     fmt.Println()
@@ -49,6 +50,7 @@ func typeInference() {
     fmt.Println("Type inference")
     fmt.Println("==============")
 
+    // The short assignment operator := creates a variable and sets it's type to that of the assigned variable.
     s := "gabbagabbahey"
     b := true
 
@@ -128,7 +130,7 @@ func pointersAndValues() {
     fmt.Println()
 
     fmt.Println("Before byRef, ref is", ref)
-    byRef("ref", &ref) // not the address of operator
+    byRef("ref", &ref) // The address of operator is &, much like c/c++
     fmt.Println("After byRef, ref is", ref)
 
     fmt.Println()
@@ -163,13 +165,13 @@ func typeConversion() {
     fmt.Println()
 }
 
-func extraCredit() {
-    fmt.Println("Extra credit")
-    fmt.Println("============")
+func arraysAndSlices() {
+    fmt.Println("Arrays and Slices")
+    fmt.Println("=================")
 
-    // The built in array, slice, and map types are not thread safe.
-
-    // arrays
+    /*
+        Arrays
+    */
     var arr1 [5]int
     arr1[2] = 3
     arr1[4] = 9
@@ -182,9 +184,11 @@ func extraCredit() {
     //arr2 = arr1
     fmt.Printf("arr2 -> value = %v, type = %T - Notice the size in the type\n", arr2, arr2)
 
-    // slices - backed by an array, but much more flexible
-    // There is so much more to slices than we can cover here. Just know that they are similar to slices in Python
-    // and you should use them instead of arrays in most situations.
+    /*
+        Slices are backed by an array, but are much more flexible.
+        There is so much more to slices than we can cover here. Just know that they are similar to slices in Python
+        and you should use them instead of arrays in most situations.
+    */
     slice1 := []int{1,4,9}
     slice2 := []int{1,2,3,5,8,13}
     // Unlike arrays, a slice's size is not part of its type
@@ -199,8 +203,17 @@ func extraCredit() {
 
     // slices and arrays are one-dimensional, but like c/c++ can be composed into multi-dimensional versions
 
-    // maps - similar to maps in other languages
-    // Like slices though, there is much more to maps than we are going to cover here
+    fmt.Println()
+}
+
+func maps() {
+    fmt.Println("Maps")
+    fmt.Println("====")
+
+    /*
+        Maps are similar to maps in other languages.
+        Like slices though, there is much more to maps than we are going to cover here.
+    */
     var famousPairs map[string]string = make(map[string]string)
     famousPairs["Bonnie"] = "Clyde"
     famousPairs["Penn"] = "Teller"
@@ -217,7 +230,16 @@ func extraCredit() {
     v, present := famousPairs["Ratchet"]
     fmt.Printf("famousPairs[\"Ratchet\"] -> value ='%s', present = %t\n", v, present)
 
-    // Complex numbers
+    fmt.Println()
+}
+
+func complexNumbers() {
+    fmt.Println("Complex numbers")
+    fmt.Println("===============")
+
+    /*
+        Complex numbers where included in Go due to there usefulness and the complexity of correctly implementing them.
+    */
     c1 := 1 + 1i
     c2 := 2 + 3i
     c3 := c1 + c2
