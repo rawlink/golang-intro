@@ -69,7 +69,7 @@ func typeAssertions() {
     fmt.Println("Type assertions")
     fmt.Println("===============")
 
-    var i interface{} = "All objects match the empty interface"
+    var i interface{} = "All types match the empty interface"
 
     // If the type assertion fails, the value will be the zero value for the type
     f, ok := i.(float64)

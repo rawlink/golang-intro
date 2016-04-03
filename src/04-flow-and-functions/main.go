@@ -214,6 +214,7 @@ func deferral(i int) {
 }
 
 func measureFunc(functionName string, start time.Time) {
+    // The time functions in Go are pretty nice.
     duration := time.Since(start)
     fmt.Println(functionName, "took", duration, "to run")
 }

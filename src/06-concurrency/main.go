@@ -25,6 +25,7 @@ func goroutines() {
 
     start := time.Now()
 
+    // Goroutines are lightweight threads.
     for i := 0 ; i < 20 ; i++ {
         go toBeGoroutined(i)
     }
