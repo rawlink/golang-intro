@@ -78,3 +78,22 @@ To install it in IDEA (Other IntelliJ platforms may be similar, but no guarantee
 0. Select the Plugins settings.
 0. Type `go` in the Plugins search field.
 0. Select the Go plugin and install it.
+
+## Open your first project
+
+From within IntelliJ:
+0. Select File->Open.
+0. Navigate to the $GOPATH/src/02-hello directory.
+0. Select OK.
+0. Open hello.go in the project view.
+0. Click on the Setup SDK link.
+0. Select your Go SDK. If it’s not available select Configure and perform the following steps:
+  0. Click on + and select Go SDK.
+  0. Navigate to your installation of the Go SDK. Most of the time, IntelliJ will have automatically selected the correct directory for you.
+  0. Select OK in the file selection dialog.
+  0. Select OK in the Configure SDK dialog.
+0. Select OK in the Select Project SDK dialog.
+0. Click on the ‘Change module type to Go and reload project’ link.
+0. Select Reload Project.
+
+Next: [Hello, Gopher!](../02-hello)
