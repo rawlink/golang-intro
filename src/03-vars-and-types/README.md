@@ -7,4 +7,6 @@ In this section, you will learn about variables and types in Go. Upon completion
 * Zero values
 * Pointers
 * Type conversion (casting)
-* Arrays, slices, maps, and complex numbers
+* Arrays and slices
+* Maps
+* Complex numbers
