@@ -1,4 +1,4 @@
-# Vars and Types
+# Variables and Types
 In this section, you will learn about variables and types in Go. Upon completion of this section you should have a basic understanding of the following:
 
 * Variable declaration and assignment
@@ -10,3 +10,5 @@ In this section, you will learn about variables and types in Go. Upon completion
 * Arrays and slices
 * Maps
 * Complex numbers
+
+Next: [Flow and Functions](../04-flow-and-functions)

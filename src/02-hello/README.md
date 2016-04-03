@@ -7,3 +7,5 @@ In this section, you will learn basic Go program structure. Upon completion of t
 * Syntax
 * The go command
 * Building and running a go program
+
+Next: [Variables and Types](../03-vars-and-types)

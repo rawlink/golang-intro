@@ -5,3 +5,5 @@ In this section, you will learn a little about methods, “objects”, and inter
 * Methods
 * Interfaces
 * Type assertions
+
+Next: [Concurrency](../06-concurrency)

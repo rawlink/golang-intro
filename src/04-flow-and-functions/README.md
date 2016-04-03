@@ -1,4 +1,4 @@
-# Flow and functions
+# Flow and Functions
 In this section, you will learn about functions and how to alter program flow. Upon completion of this section you should have a basic understanding of the following:
 
 * If statements - Both familiar and new.
@@ -8,3 +8,5 @@ In this section, you will learn about functions and how to alter program flow. U
 * Deferred functions
 * Closures
 * Variadic functions - AKA varargs
+
+Next: [Methods and Interfaces](../05-methods-and-interfaces)

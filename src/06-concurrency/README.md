@@ -7,3 +7,5 @@ In this section, you will learn about what makes Go special. Goroutines and chan
 * Select - It’s kind of like a switch statement for channels.
 
 There are additional synchronization primitives and types contained in the `sync` and `sync/atomic` packages. In general, you should only use these packages for low-level code and prefer the higher level abstraction provided by the built-in goroutines and channels.
+
+Next: [A Web Service](../07-webservice)
