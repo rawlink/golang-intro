@@ -9,7 +9,7 @@ import "fmt"
 
 // Note the lack of a return value or arguments for the main method. More on that later.
 func main() {
-    // A function with a capital letter?!?! What is that about? Yeah, we'll get to that later as well.
+    // The fmt package provides functions for formatting data with io streams, strings, and the console.
     fmt.Println("Hello,", "gopher!") // Arguments will be converted to strings and concatenated together with spaces in between
     fmt.Printf("Goodbye, %s.\n", "gopher") // Does what you would think.
 
