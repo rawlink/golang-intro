@@ -82,6 +82,7 @@ To install it in IDEA (Other IntelliJ platforms may be similar, but no guarantee
 ## Open your first project
 
 From within IntelliJ:
+
 0. Select File->Open.
 0. Navigate to the $GOPATH/src/02-hello directory.
 0. Select OK.
