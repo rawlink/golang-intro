@@ -7,6 +7,7 @@ In this section, you will setup your Go development environment. Upon completion
 * Configured the tutorial as your Go development environment.
 * Installed the Glide package manager.
 * Installed the IntelliJ Go plugin.
+* Opened your first Go project.
 
 ## Installing Go
 
@@ -87,14 +88,14 @@ From within IntelliJ:
 0. Navigate to the $GOPATH/src/02-hello directory.
 0. Select OK.
 0. Open hello.go in the project view.
-0. Click on the Setup SDK link.
+0. Click on the ‘Setup SDK’ link.
 0. Select your Go SDK. If it’s not available select Configure and perform the following steps:
-  0. Click on + and select Go SDK.
+  0. Click on + and select ‘Go SDK’.
   0. Navigate to your installation of the Go SDK. Most of the time, IntelliJ will have automatically selected the correct directory for you.
   0. Select OK in the file selection dialog.
-  0. Select OK in the Configure SDK dialog.
-0. Select OK in the Select Project SDK dialog.
+  0. Select OK in the ‘Configure SDK’ dialog.
+0. Select OK in the ‘Select Project SDK’ dialog.
 0. Click on the ‘Change module type to Go and reload project’ link.
-0. Select Reload Project.
+0. Select ‘Reload Project’.
 
 Next: [Hello, Gopher!](../02-hello)
