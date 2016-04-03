@@ -22,15 +22,15 @@ func main() {
     fmt.Println("Exiting main")
     fmt.Println("=====================")
 
-    // we renamed math to m in the import
+    // We renamed math to m in the import.
     fmt.Println("Using my horribly renamed import, the square root of 2 is", m.Sqrt(2.0))
 
-    // Note the exit status in the run console
+    // Note the exit status in the run console.
     os.Exit(1)
 }
 
-func multiReturn() (int,error) {
-    // Here we have an example of a multi-return. A return signature of (<type>, error) is very common in Go
+func multiReturn() (int,error) { // If you have multiple return values the return signature should be surrounded by parentheses.
+    // Here we have an example of a multi-return. A return signature of (<type>, error) is very common in Go.
     val := 42
     err := errors.New("Bad stuff happened")
     //err = nil
@@ -45,11 +45,11 @@ func ifStatements() {
     if true {
         fmt.Println("Always truthful.")
     }
-    // This won't compile
+    // This won't compile.
     //if true
     //    fmt.Println("Always truthful.")
 
-    // The else if and else are as expected
+    // The else if and else are as expected.
     num := 3
     if num < 0 {
         fmt.Println("Negative, sir")
@@ -88,7 +88,7 @@ func loops() {
     }
     fmt.Println()
 
-    // The init and post are optional
+    // The init and post are optional.
     j := 0
     fmt.Print("j is")
     for ; j < 2 ; {
@@ -106,7 +106,7 @@ func loops() {
     }
     fmt.Println()
 
-    // for... ever
+    // For... ever.
     rand.Seed(time.Now().UnixNano())
     fmt.Print("You might be stuck here forever...")
     for {
@@ -118,25 +118,25 @@ func loops() {
     }
     fmt.Println("\n... or not.")
 
-    // Showing the range keyword in conjunction with for loops - essentially for each
+    // You can use the range keyword in conjunction with for loops. This is a for each loop.
     // There are several libraries for more advanced handling of application arguments.
     fmt.Printf("OS arguments type = %T\n", os.Args)
-    // Example of a for loop using a range. Note the multi-return of range.
+    // Example of a for loop using a range. Note the multi-return from the range.
     for index,val := range os.Args {
         fmt.Println("Argument", index, "value =", val)
     }
-    // Lets ignore the index
+    // Lets ignore the index. You can use _ to swallow unneeded variables.
     //for _,val := range os.Args {
     //    fmt.Println("Argument value =", val)
     //}
-    // Lets ignore the value
+    // Lets ignore the value.
     //fmt.Print("There are")
     //for index := range os.Args {
     //    fmt.Print(" ", index)
     //}
     //fmt.Println(" values")
 
-    // range works with maps too
+    // Range works with maps too.
     squares := map[int]int{1:1, 2:4, 3:9, 4:16}
     for key,val := range squares {
         fmt.Println(key, "squared is", val)
@@ -155,8 +155,8 @@ func switchStatements() {
     fmt.Println("Switch statements")
     fmt.Println("=================")
 
-    // Like an if statement, there is an optional assignment block
-    // And you don't need that stupid "break" that everyone else does. If you need it there is fallthrough
+    // Like an if statement, there is an optional assignment block.
+    // And you don't need that stupid "break" that everyone else does. If you need it there is fallthrough.
     switch firstName := getFirstName() ; firstName {
     case "bambam":
         fmt.Println("Adopted")
@@ -166,7 +166,7 @@ func switchStatements() {
     case "barney":
         fmt.Println("Rubbles family")
     case "fred","wilma","pebbles","dino":
-        // If you only need to handle multiple cases as one, you can forget fallthrough altogether
+        // If you only need to handle multiple cases as one, you can forget fallthrough altogether.
         fmt.Println("Flintstones family")
     default:
         fmt.Println("Nobody important")
@@ -239,7 +239,7 @@ func deferredFunctions() {
     }
     fmt.Println("After for loop")
 
-    /* Defer is a great mechanism to do things you would normally do with finally in Java. For example
+    /* Defer is a great mechanism to do things you would normally do with finally in Java. For example:
 
         f, err := os.Open("/path/to/file.txt")
         if err != nil {
@@ -252,14 +252,14 @@ func deferredFunctions() {
 
     anotherCoolDeferredExample()
 
-    fmt.Println("Exiting iDefer")
+    fmt.Println("Exiting deferredFunctions")
 }
 
 func getFibber() func() int {
     a, b := 0, 1
     return func() int {
         a, b = b, a+b // It's worth noting that these assignments happen "simultaneously"
-        // This would return an altogether different result.
+        // The following would return an altogether different result. Do you know what the result would be?
         //a = b
         //b = a+b
         return a
@@ -270,7 +270,7 @@ func closures() {
     fmt.Println("Closures")
     fmt.Println("========")
 
-    // What an elegant functional fibonacci iterator
+    // What an elegant functional fibonacci iterator.
     fib := getFibber()
     for i := 1 ; i <= 10 ; i++ {
         fmt.Println("Fibonnaci", i, "is", fib())
