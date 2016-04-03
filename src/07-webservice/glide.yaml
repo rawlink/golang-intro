@@ -1,4 +1,4 @@
-package: 07-myfirstservice
+package: 07-webservice
 import:
 - package: github.com/Sirupsen/logrus
 - package: github.com/afex/hystrix-go
