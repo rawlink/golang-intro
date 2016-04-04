@@ -295,5 +295,8 @@ func variadicFunctions() {
     // varargs functions are as expected
     sumOf("all fears", 15, 34, 53, 22, 91)
 
+    my_digits := []int{5,5,5,5}
+    sumOf("my digits", my_digits...)
+
     fmt.Println()
 }
