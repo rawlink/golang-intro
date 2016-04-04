@@ -6,7 +6,7 @@ In this section, you will setup your Go development environment. Upon completion
 * Cloned this repository.
 * Configured the tutorial as your Go development environment.
 * Installed the Glide package manager.
-* Installed the IntelliJ Go plugin.
+* Installed the IntelliJ Go plugin. If JetBrains products are not your thing, alternatives are provided.
 * Opened your first Go project.
 
 ## Installing Go
@@ -68,17 +68,27 @@ The [Glide](https://github.com/Masterminds/glide) package manager for Go can be 
 
    `glide version dev`
 
-## Install the IntelliJ Go plugin
+## Install the IntelliJ IDEA Go plugin
 
-The IntelliJ Go plugin is compatible with a large set of IntelliJ platform IDEs (e.g. IDEA, WebStorm, Android Studio, etc.). It can be found at it's [GitHub page](https://github.com/go-lang-plugin-org/go-lang-idea-plugin).
+The IDEA Go plugin is compatible with a large set of JetBrains platform IDEs (e.g. IntelliJ IDEA, WebStorm, Android Studio, etc.). It can be found at it's [GitHub page](https://github.com/go-lang-plugin-org/go-lang-idea-plugin).
 
-To install it in IDEA (Other IntelliJ platforms may be similar, but no guarantees):
+To install it in IDEA (Other JetBrains platforms may be similar, but no guarantees):
 
 0. Follow the instructions on the [JetBrains site](https://www.jetbrains.com/help/idea/2016.1/managing-enterprise-plugin-repositories.html?origin=old_help) to add the plugin. When you are adding the repository in step 4 of the JetBrains instructions, use the value `https://plugins.jetbrains.com/plugins/alpha/5047` for the weekly build of the plugin.
 0. Open the Preferences dialog.
 0. Select the Plugins settings.
 0. Type `go` in the Plugins search field.
 0. Select the Go plugin and install it.
+
+### JetBrains alternatives
+
+For those of you who are not using a JetBrains product, there are several other Go IDEs to choose from.
+
+* Atom with the [go-plus plugin](https://github.com/joefitzgerald/go-plus)
+* Sublime with the [GoSublime plugin](https://github.com/DisposaBoy/GoSublime)
+* The cross-platform [LiteIDE X](https://github.com/visualfc/liteide)
+* [go-vim in docker](https://hub.docker.com/r/mbrt/golang-vim-dev) to ease the pain of setting up and configuring go-vim and friends.
+* Others can be found [here](https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins)
 
 ## Open your first project
 

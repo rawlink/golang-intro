@@ -1,4 +1,4 @@
-# Intro to the Go language
+# Intro to the Go Language
 
 This tutorial is a brief introduction to the Go language. The goals are as follows:
 

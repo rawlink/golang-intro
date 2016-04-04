@@ -2,6 +2,7 @@ pkg
 bin
 src/github.com
 src/gopkg.in
+src/golang.org
 .idea
 vendor
 hello
