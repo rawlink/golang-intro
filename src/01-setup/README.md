@@ -55,7 +55,7 @@ Next you will clone this tutorial repository.
 Now that you have cloned the tutorial repository, you will configure it as your Go development environment. It is assumed that you know how to configure environment variables for your OS. You may need to adjust the examples for your particular OS.
 
 0. Point the GOPATH variable at the cloned tutorial directory. e.g. `GOPATH=/home/rawlink/golang-intro`
-0. Set the GO15VENDOREXPERIMENT flag to 1. e.g. `GO15VENDOREXPERIMENT=1`
+0. Set the GO15VENDOREXPERIMENT environment variable to 1. e.g. `GO15VENDOREXPERIMENT=1`
 0. Add the $GOPATH/bin directory to your PATH. Don’t worry if this directory doesn’t exist, Go will create it for you. e.g. `PATH=$PATH:$GOPATH/bin`
 
 ## Install the Glide package manager
