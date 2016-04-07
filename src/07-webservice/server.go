@@ -67,7 +67,7 @@ func parseCommandLine() map[string]interface{} {
 }
 
 func metricsWrapper(name string) gin.HandlerFunc {
-    // Using a closure. This allows us to create singletons and register them once.
+    // Using a closure. This allows us to create middleware scoped objects and register them once.
     counter := metrics.NewCounter()
     timer := metrics.NewTimer()
 
@@ -83,6 +83,7 @@ func metricsWrapper(name string) gin.HandlerFunc {
 }
 
 func counterMiddleware() gin.HandlerFunc {
+    // Using a closure. This allows us to create middleware scoped objects and register them once.
     counter := metrics.NewCounter()
     metrics.Register("api.all.counter", counter)
 
