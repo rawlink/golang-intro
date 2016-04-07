@@ -39,7 +39,7 @@ func zeroValues() {
     fmt.Println("i is", i)
     fmt.Println("b is", b)
     fmt.Printf("s is '%s'\n", s)
-    fmt.Printf("o is %+v\n", o)
+    fmt.Printf("o is %#v\n", o)
     fmt.Println("p is", p)
 
     fmt.Println()
@@ -65,7 +65,7 @@ func typeInference() {
 
     fmt.Printf("s -> value = %s, type = %T\n", s, s)
     fmt.Printf("b -> value = %t, type = %T\n", b, b)
-    fmt.Printf("o -> value = %+v, type = %T\n", o, o)
+    fmt.Printf("o -> value = %#v, type = %T\n", o, o)
 
     fmt.Println()
 }
@@ -140,7 +140,7 @@ func pointersAndValues() {
     o := new(myObj)
     o.s = "Isn't that nice"
     o.i = 1
-    fmt.Printf("o -> value = %+v, type = %T\n", o, o)
+    fmt.Printf("o -> value = %#v, type = %T\n", o, o)
 
     fmt.Println()
 }

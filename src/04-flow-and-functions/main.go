@@ -243,7 +243,7 @@ func deferredFunctions() {
     /* Defer is a great mechanism to do things you would normally do with finally in Java. For example:
 
         f, err := os.Open("/path/to/file.txt")
-        if err != nil {
+        if err == nil {
             // log and return an error here
         }
         defer f.Close()
